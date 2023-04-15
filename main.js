@@ -38,7 +38,7 @@ class Student {
         return sum / this.grades.length;
     }
 
-    getAttendancePercentage() {
+    getAttendancePercent() {
         if (this.attendance.filter(Boolean).length === 0) {
             return 0;
         }
@@ -47,37 +47,96 @@ class Student {
 
     summary() {
         const averageGrade = this.getAverageGrade();
-        const attendancePercentage = this.getAttendancePercentage();
+        const attendancePercentage = this.getAttendancePercent();
         if (averageGrade > 90 && attendancePercentage > 0.9) {
             return 'Молодець!';
-        } else if (averageGrade > 90 || attendancePercentage > 0.9) {
+        }
+        else if (averageGrade > 90 || attendancePercentage > 0.9) {
             return 'Добре, але можна краще';
-        } else {
+        }
+        else {
             return 'Редиска!';
         }
     }
 }
 
-const student1 = new Student('Дмитро', 'Бойченко', 2001);
-student1.grades = [100, 95, 95, 96];
+const student1 = new Student('Дмитро', 'Бойченко', 2002);
+student1.grades = [100, 95, 95, 96, 90];
 student1.present();
 student1.present();
 student1.present();
 student1.present();
-console.log(`Вік: ${student1.getAge()}, Середня оцінка: ${student1.getAverageGrade()}, Відвідуваність: ${student1.getAttendancePercentage()}, ${student1.summary()}`);
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+student1.present();
+console.log(`Студент: ${student1.firstName} ${student1.lastName}, Вік: ${student1.getAge()}, Середня оцінка: ${student1.getAverageGrade()}, Відвідуваність: ${student1.getAttendancePercent()}, ${student1.summary()}`);
 
-const student2 = new Student('Данило', 'Вакуленко', 2000);
-student2.grades = [90, 95, 95, 90];
+const student2 = new Student('Данило', 'Вакуленко', 2003);
+student2.grades = [90, 95, 95, 90, 85];
 student2.present();
 student2.present();
 student2.present();
 student2.absent();
-console.log(`Вік: ${student2.getAge()}, Середня оцінка: ${student2.getAverageGrade()}, Відвідуваність: ${student2.getAttendancePercentage()}, ${student2.summary()}`);
+student2.absent();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+student2.absent();
+student2.present();
+student2.present();
+student2.present();
+student2.absent();
+student2.present();
+student2.present();
+student2.present();
+student2.present();
+console.log(`Студент: ${student2.firstName} ${student2.lastName}, Вік: ${student2.getAge()}, Середня оцінка: ${student2.getAverageGrade()}, Відвідуваність: ${student2.getAttendancePercent()}, ${student2.summary()}`);
 
-const student3 = new Student('Павло', 'Борщ', 1999);
-student3.grades = [70, 75, 80, 65];
+const student3 = new Student('Павло', 'Марценюк', 2002);
+student3.grades = [70, 75, 80, 65, 74];
+student3.present();
+student3.absent();
+student3.absent();
+student3.absent();
+student3.present();
+student3.absent();
+student3.present();
+student3.absent();
+student3.present();
+student3.absent();
+student3.absent();
 student3.present();
 student3.present();
 student3.absent();
 student3.absent();
-console.log(`Вік: ${student3.getAge()}, Середня оцінка: ${student3.getAverageGrade()}, Відвідуваність: ${student3.getAttendancePercentage()}, ${student3.summary()}`);
+student3.absent();
+student3.present();
+student3.present();
+student3.present();
+student3.present();
+student3.present();
+student3.absent();
+student3.absent();
+console.log(`Студент: ${student3.firstName} ${student3.lastName}, Вік: ${student3.getAge()}, Середня оцінка: ${student3.getAverageGrade()}, Відвідуваність: ${student3.getAttendancePercent()}, ${student3.summary()}`);
