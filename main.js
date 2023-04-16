@@ -15,7 +15,6 @@ class Student {
             console.log('Відмінна відвідуваність');
         }
     }
-
     absent() {
         const index1 = this.attendance.indexOf(null);
         if (index1 >= 0) {
